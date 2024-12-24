@@ -1,1 +1,26 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #0b0c10;
+  color: #f0f0f0;
+}
+header {
+  text-align: center;
+  margin-top: 50px;
+}
+h1 {
+  font-size: 3em;
+  color: #8e44ad; /* Purple tone */
+}
+nav a {
+  margin: 0 15px;
+  text-decoration: none;
+  color: #f39c12; /* Gold accents */
+}
+section {
+  margin: 50px 0;
+}
+footer {
+  text-align: center;
+  margin-top: 50px;
+}
 
