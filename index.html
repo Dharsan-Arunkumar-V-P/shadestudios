@@ -4,34 +4,41 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Shade Studios</title>
-  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(135deg, #4e0d6e, #2c0057);
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      overflow: hidden;
+      font-family: Arial, sans-serif;
+    }
+    .video-container {
+      text-align: center;
+    }
+    video {
+      max-width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+    }
+    .message {
+      margin-top: 20px;
+      font-size: 20px;
+      font-weight: bold;
+    }
+  </style>
 </head>
 <body>
-  <header>
-    <h1>Welcome to Shade Studios</h1>
-    <p>Where creativity and technology meet</p>
-    <nav>
-      <a href="#shade">Shade</a>
-      <a href="#dharsan">Dharsan</a>
-      <a href="#blog">Blog</a>
-      <a href="#events">Events</a>
-    </nav>
-  </header>
-  <section id="shade">
-    <!-- Add Shade content here -->
-  </section>
-  <section id="dharsan">
-    <!-- Add Dharsan content here -->
-  </section>
-  <section id="blog">
-    <!-- Add Blog content here -->
-  </section>
-  <section id="events">
-    <!-- Add Events content here -->
-  </section>
-  <footer>
-    <p>&copy; 2024 Shade Studios</p>
-  </footer>
-  <script src="scripts.js"></script>
+  <div class="video-container">
+    <video autoplay loop muted>
+      <source src="assets/under_cons.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <p class="message">Our website is coming soon! Stay tuned.</p>
+  </div>
 </body>
 </html>
