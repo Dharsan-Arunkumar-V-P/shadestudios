@@ -1,26 +1,64 @@
 body {
   font-family: Arial, sans-serif;
-  background: #0b0c10;
-  color: #f0f0f0;
-}
-header {
-  text-align: center;
-  margin-top: 50px;
-}
-h1 {
-  font-size: 3em;
-  color: #8e44ad; /* Purple tone */
-}
-nav a {
-  margin: 0 15px;
-  text-decoration: none;
-  color: #f39c12; /* Gold accents */
-}
-section {
-  margin: 50px 0;
-}
-footer {
-  text-align: center;
-  margin-top: 50px;
+  background-color: #f4f4f4;
+  color: #333;
+  margin: 0;
+  padding: 0;
 }
 
+header {
+  background-color: #4CAF50;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+h1, h2 {
+  font-size: 2em;
+}
+
+section {
+  background-color: white;
+  padding: 20px;
+  margin: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  margin: 0 auto;
+}
+
+label, input, button {
+  margin-bottom: 10px;
+}
+
+input, button {
+  padding: 10px;
+  font-size: 1em;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+button {
+  background-color: #4CAF50;
+  color: white;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #45a049;
+}

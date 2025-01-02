@@ -3,80 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simple Webpage</title>
+    <title>Basic Webpage</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
     <header>
-        <h1>Welcome to My Simple Webpage</h1>
-        <p>This webpage is created using basic HTML elements to showcase my skills and interests.</p>
+        <h1>Welcome to My Basic Webpage</h1>
+        <p>This is a simple webpage with HTML, CSS, and JavaScript!</p>
     </header>
 
     <section>
         <h2>About Me</h2>
-        <p>Hello! My name is Dharsan Arunkumar. I'm a passionate music producer, artist, and student currently pursuing a dual degree in Computer Science and Data Science.</p>
-        <p>In my free time, I enjoy creating experimental music, digital art, and photography. I'm also the Club Service Director of my Rotaract club, where I organize and lead community service projects. I’m excited to expand my knowledge in web development and apply it to my creative pursuits.</p>
+        <p>Hello! I'm learning to create webpages.</p>
     </section>
 
     <section>
-        <h2>My Favorite Image</h2>
-        <img src="assets/utopia.jpeg" alt="PSVPEC Utopia Image" class="header-image">
-    </header>
-        <p>Above is an image that represents my creative vision. I love working with visuals, whether it’s creating artwork or capturing moments through photography.</p>
-    </section>
-
-    <section>
-        <h2>My Favorite Hobbies</h2>
-        <ul>
-            <li>Music Production</li>
-            <li>Digital Art</li>
-            <li>Reading Books</li>
-            <li>Photography</li>
-            <li>Web Development</li>
-        </ul>
-    </section>
-
-    <section>
-        <h2>My Task List</h2>
-        <table border="1">
-            <thead>
-                <tr>
-                    <th>Task</th>
-                    <th>Status</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Complete HTML Project</td>
-                    <td>In Progress</td>
-                </tr>
-                <tr>
-                    <td>Learn CSS</td>
-                    <td>Pending</td>
-                </tr>
-                <tr>
-                    <td>Practice Music Production</td>
-                    <td>Completed</td>
-                </tr>
-            </tbody>
-        </table>
-    </section>
-
-    <section>
-        <h2>Contact Me</h2>
-        <form action="#">
-            <label for="name">Your Name:</label><br>
+        <h2>Form</h2>
+        <form id="myForm">
+            <label for="name">Your Name:</label>
             <input type="text" id="name" name="name" required><br><br>
-            <label for="email">Your Email:</label><br>
+
+            <label for="email">Your Email:</label>
             <input type="email" id="email" name="email" required><br><br>
-            <label for="message">Your Message:</label><br>
-            <textarea id="message" name="message" rows="4" required></textarea><br><br>
+
             <button type="submit">Submit</button>
         </form>
     </section>
 
     <footer>
-        <p>Created by Dharsan Arunkumar. All rights reserved.</p>
+        <p>&copy; 2025 My Webpage</p>
     </footer>
 
+    <script src="script.js"></script>
 </body>
 </html>
