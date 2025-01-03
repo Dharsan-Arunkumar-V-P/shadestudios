@@ -1,12 +1,17 @@
-document.getElementById("contactForm").addEventListener("submit", function(event) {
-  event.preventDefault();
-  const name = document.getElementById("name").value.trim();
-  const email = document.getElementById("email").value.trim();
+// Smooth Scrolling for Links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function (e) {
+    e.preventDefault();
+    document.querySelector(this.getAttribute('href')).scrollIntoView({
+      behavior: 'smooth'
+    });
+  });
+});
 
-  if (name && email) {
-      alert("Thank you for reaching out, " + name + "!");
-      document.getElementById("contactForm").reset();
-  } else {
-      alert("Please fill out all fields.");
-  }
+// Mobile Menu Toggle
+const mobileMenu = document.getElementById('mobile-menu');
+const navList = document.querySelector('.nav-list');
+
+mobileMenu.addEventListener('click', () => {
+  navList.classList.toggle('active');
 });
