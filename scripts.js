@@ -4,7 +4,6 @@ document.getElementById("myForm").addEventListener("submit", function(event) {
   const email = document.getElementById("email").value.trim();
 
   if (name && email) {
-
       document.getElementById("displayName").textContent = "Name: " + name;
       document.getElementById("displayEmail").textContent = "Email: " + email;
       document.getElementById("submittedInfo").style.display = "block";
