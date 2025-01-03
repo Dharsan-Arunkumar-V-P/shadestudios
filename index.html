@@ -3,42 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shade's Cosmic Mythical Webpage</title>
+    <title>Shade's Digital World</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
     <header>
-        <h1>Welcome to Shade's Cosmic Realm</h1>
-        <p>Explore the universe and mystical realms through an interactive cosmic journey.</p>
+        <div class="logo">Shade</div>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#work">Work</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
     </header>
 
     <section id="about">
-        <h2>The Cosmic Journey Begins</h2>
-        <p>Travel through galaxies, encounter mythical beings, and unlock the secrets of the cosmos.</p>
+        <h2>Who Am I?</h2>
+        <p>Welcome to my digital universe. I'm Shade—an artist, music producer, designer, and creator. I blend sound and visuals into immersive experiences that transcend the ordinary.</p>
+        <p>From ambient, dark experimental music to abstract visual art, I shape the future with creativity and innovation.</p>
     </section>
 
-    <section id="form-section">
-        <h2>Your Cosmic Identity</h2>
-        <form id="myForm">
-            <label for="name">Your Name (Enter the Stars):</label>
-            <input type="text" id="name" name="name" required><br><br>
+    <section id="work">
+        <h2>My Craft</h2>
+        <p>My work spans across music production, digital art, UI/UX design, and more. Below are some of the most recent projects I've brought to life:</p>
+        <div class="project-gallery">
+            <div class="project">
+                <img src="https://via.placeholder.com/300" alt="Music Project">
+                <p>Ambient Soundscapes</p>
+            </div>
+            <div class="project">
+                <img src="https://via.placeholder.com/300" alt="Art Project">
+                <p>Abstract Art Series</p>
+            </div>
+            <div class="project">
+                <img src="https://via.placeholder.com/300" alt="Design Project">
+                <p>UI/UX Concepts</p>
+            </div>
+        </div>
+    </section>
 
-            <label for="email">Your Astral Email:</label>
-            <input type="email" id="email" name="email" required><br><br>
-
-            <button type="submit">Send Your Cosmic Message</button>
+    <section id="contact">
+        <h2>Let's Connect</h2>
+        <p>If you're looking for collaboration or just want to reach out, I'd love to hear from you.</p>
+        <form id="contactForm">
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">Your Email:</label>
+            <input type="email" id="email" name="email" required>
+            <button type="submit">Send Message</button>
         </form>
     </section>
 
-    <div id="submittedInfo" style="display: none;">
-        <h3>Your Cosmic Information:</h3>
-        <p id="displayName"></p>
-        <p id="displayEmail"></p>
-    </div>
-
     <footer>
-        <p>&copy; 2025 Shade's Webpage | Powered by the Stars</p>
+        <p>&copy; 2025 Shade's Digital World</p>
     </footer>
 
     <script src="script.js"></script>
