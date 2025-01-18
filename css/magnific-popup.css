@@ -454,7 +454,7 @@ screen and (max-height: 300px) {
 }
 
 .mfp-close {
-  focus-visible: outline: none;
+  focus-visible: outline none;
 }
 
 /* Button hover effects */

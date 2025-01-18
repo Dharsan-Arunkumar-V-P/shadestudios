@@ -1,107 +1,96 @@
-/******************************************************************
-  Template Name: Dreams
-  Description: Dreams wedding template
-  Author: Colorib
-  Author URI: https://colorlib.com/
-  Version: 1.0
-  Created: Colorib
-******************************************************************/
-/*------------------------------------------------------------------
-[Table of contents]
+/* Importing Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Lora:wght@400;700&display=swap');
 
-1.  Template default CSS
-	1.1	Variables
-	1.2	Mixins
-	1.3	Flexbox
-	1.4	Reset
-2.  Helper Css
-3.  Header Section
-4.  Hero Section
-5.  Services Section
-6.  Counter Section
-7.  Team Section
-8.  Latest Section
-9.  Contact
-10.  Footer Style
--------------------------------------------------------------------*/
-/*----------------------------------------*/
-/* Template default CSS
-/*----------------------------------------*/
-html,
-body {
+/* General Reset */
+html, body {
   height: 100%;
-  font-family: "Josefin Sans", sans-serif;
+  font-family: 'Lora', serif; /* Body text font */
   -webkit-font-smoothing: antialiased;
+  background-color: black; /* Set background to black */
+  color: #ffe5b9; /* Whisper Yellow text color */
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+/* Header Elements */
+h1, h2, h3, h4, h5, h6 {
   margin: 0;
-  color: #111111;
-  font-weight: 400;
-  font-family: "Play", sans-serif;
+  color: #ffe5b9; /* Whisper Yellow for header text */
+  font-weight: 600; /* Makes headings bolder */
+  font-family: 'Poppins', sans-serif; /* Heading font */
 }
 
-h1 {
-  font-size: 70px;
-}
+/* Font Sizes */
+h1 { font-size: 70px; }
+h2 { font-size: 36px; }
+h3 { font-size: 30px; }
+h4 { font-size: 24px; }
+h5 { font-size: 18px; }
+h6 { font-size: 16px; }
 
-h2 {
-  font-size: 36px;
-}
-
-h3 {
-  font-size: 30px;
-}
-
-h4 {
-  font-size: 24px;
-}
-
-h5 {
-  font-size: 18px;
-}
-
-h6 {
-  font-size: 16px;
-}
-
+/* Paragraph */
 p {
   font-size: 16px;
-  font-family: "Josefin Sans", sans-serif;
-  color: #adadad;
+  font-family: 'Lora', serif; /* Use Lora for body text */
+  color: #adadad; /* Light gray text for paragraphs */
   font-weight: 400;
   line-height: 26px;
   margin: 0 0 15px 0;
 }
 
+/* Images */
 img {
   max-width: 100%;
+  border-radius: 10px; /* Optional: Adds rounded corners to images */
 }
 
-input:focus,
-select:focus,
-button:focus,
-textarea:focus {
+/* Form and Input Focus */
+input:focus, select:focus, button:focus, textarea:focus {
   outline: none;
+  border: 1px solid #ffe5b9; /* Adds a Whisper Yellow border when focused */
 }
 
-a:hover,
-a:focus {
+/* Anchor (Link) Styles */
+a:hover, a:focus {
   text-decoration: none;
   outline: none;
-  color: #fff;
+  color: #ffe5b9; /* Whisper Yellow on hover/focus */
 }
 
-ul,
-ol {
+/* Unordered & Ordered Lists */
+ul, ol {
   padding: 0;
   margin: 0;
+  list-style: none; /* Removes default list styling */
 }
+
+/* Optional Custom Scrollbar for Better Visibility */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: #333333; /* Dark scrollbar track */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #ffe5b9; /* Whisper Yellow scrollbar thumb */
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #ffcc80; /* Lighter shade of Whisper Yellow on hover */
+}
+
+/* Responsive Font Sizes (Optional, for better mobile adaptability) */
+@media (max-width: 768px) {
+  h1 { font-size: 50px; }
+  h2 { font-size: 28px; }
+  h3 { font-size: 24px; }
+  h4 { font-size: 20px; }
+  h5 { font-size: 16px; }
+  h6 { font-size: 14px; }
+  p { font-size: 14px; }
+}
+
 
 /*---------------------
   Helper CSS
@@ -293,12 +282,13 @@ ol {
 /*---------------------
   Header
 -----------------------*/
+/* Position of the header */
 .header {
   position: absolute;
   left: 0;
   top: 0;
   width: 100%;
-  background: transparent;
+  background: black; /* Set background to black */
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   z-index: 9;
 }
@@ -306,6 +296,7 @@ ol {
 .header__logo {
   padding: 30px 0;
 }
+
 .header__logo a {
   display: inline-block;
 }
@@ -319,88 +310,69 @@ ol {
   display: inline-block;
   margin-right: 45px;
 }
+
 .header__nav__menu ul li {
   list-style: none;
   display: inline-block;
   margin-right: 45px;
   position: relative;
 }
-.header__nav__menu ul li.active a:after {
-  -webkit-transform: scale(1);
-      -ms-transform: scale(1);
-          transform: scale(1);
-}
-.header__nav__menu ul li:hover a:after {
-  -webkit-transform: scale(1);
-      -ms-transform: scale(1);
-          transform: scale(1);
-}
+
 .header__nav__menu ul li:hover .dropdown {
   top: 34px;
   opacity: 1;
   visibility: visible;
 }
-.header__nav__menu ul li:last-child {
-  margin-right: 0;
-}
+
 .header__nav__menu ul li .dropdown {
   position: absolute;
   left: 0;
   top: 60px;
   width: 140px;
-  background: #ffffff;
+  background: #333333; /* Dark background for dropdown */
   text-align: left;
   padding: 2px 0;
   z-index: 9;
   opacity: 0;
   visibility: hidden;
-  -webkit-transition: all, 0.3s;
-  -o-transition: all, 0.3s;
-  transition: all, 0.3s;
+  transition: all 0.3s;
 }
-.header__nav__menu ul li .dropdown li {
-  display: block;
-  margin-right: 0;
-}
+
 .header__nav__menu ul li .dropdown li a {
   font-size: 14px;
-  color: #111111;
+  color: #ffe5b9; /* Whisper Yellow for text */
   padding: 8px 20px;
-  text-transform: capitalize;
 }
-.header__nav__menu ul li .dropdown li a:after {
-  display: none;
-}
+
 .header__nav__menu ul li a {
   font-size: 15px;
   font-family: "Play", sans-serif;
-  color: #ffffff;
+  color: #ffe5b9; /* Whisper Yellow for links */
   display: block;
   text-transform: uppercase;
   position: relative;
   padding: 6px 0;
 }
+
 .header__nav__menu ul li a:after {
   position: absolute;
   left: 0;
   bottom: 0;
   width: 100%;
   height: 2px;
-  background: #00bfe7;
+  background: #ffe5b9; /* Whisper Yellow underline */
   content: "";
-  -webkit-transform: scale(0);
-      -ms-transform: scale(0);
-          transform: scale(0);
-  -webkit-transition: all, 0.3s;
-  -o-transition: all, 0.3s;
-  transition: all, 0.3s;
+  transform: scale(0);
+  transition: all 0.3s;
 }
 
+/* Social icons */
 .header__nav__social {
   display: inline-block;
   position: relative;
   padding-left: 50px;
 }
+
 .header__nav__social:before {
   position: absolute;
   left: 0;
@@ -410,17 +382,60 @@ ol {
   background: rgba(225, 225, 225, 0.2);
   content: "";
 }
+
 .header__nav__social a {
-  color: #ffffff;
+  color: #ffe5b9; /* Whisper Yellow for social icons */
   font-size: 15px;
   margin-right: 18px;
 }
+
 .header__nav__social a:last-child {
   margin-right: 0;
 }
 
-.slicknav_menu {
-  display: none;
+/* Mobile menu social icons */
+.mobile-menu-social {
+  display: none; /* Hidden by default */
+  justify-content: space-between;
+  margin-top: 20px;
+  padding: 10px 0;
+  text-align: center;
+  background: black; /* Match the background color */
+}
+
+.mobile-menu-social a {
+  color: #ffe5b9; /* Whisper Yellow for mobile menu icons */
+  font-size: 24px;
+  padding: 0 10px;
+}
+
+.mobile-menu-social a:hover {
+  color: #ffffff; /* White hover effect */
+}
+
+/* Toggle display when mobile menu is active */
+.slicknav_menu .slicknav_nav {
+  display: block;
+}
+
+.slicknav_menu .slicknav_nav.open {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.slicknav_menu.open .mobile-menu-social {
+  display: flex;
+}
+
+.slicknav_menu .slicknav_nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+.slicknav_menu .slicknav_nav ul li {
+  margin: 10px 0;
+  display: block;
 }
 
 /*---------------------
