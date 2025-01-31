@@ -413,6 +413,8 @@ ul, ol {
   color: #ffffff; /* White hover effect */
 }
 
+
+
 /* Toggle display when mobile menu is active */
 .slicknav_menu .slicknav_nav {
   display: block;
@@ -433,9 +435,18 @@ ul, ol {
   padding: 0;
 }
 
-.slicknav_menu .slicknav_nav ul li {
-  margin: 10px 0;
+/* Ensure menu text is white */
+.slicknav_menu .slicknav_nav ul li a {
+  color: #ffffff !important; /* White text */
+  text-decoration: none;
+  padding: 10px;
   display: block;
+}
+
+/* Hover effect */
+.slicknav_menu .slicknav_nav ul li a:hover {
+  background: #ffe5b9 !important; /* Whisper Yellow background */
+  color: #000000 !important; /* Black text */
 }
 
 /*---------------------
@@ -496,7 +507,7 @@ ul, ol {
 }
 
 .hero__text span {
-  color: #ffffff;
+  color: black;
   display: block;
   font-size: 15px;
   letter-spacing: 2px;
@@ -510,7 +521,7 @@ ul, ol {
   transition: all, 0.3s;
 }
 .hero__text h2 {
-  color: #ffffff;
+  color: black;
   font-size: 60px;
   font-weight: 700;
   line-height: 70px;
