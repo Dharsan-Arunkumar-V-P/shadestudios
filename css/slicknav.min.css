@@ -15,7 +15,7 @@
  }
  
  body {
-   font-family: 'Montserrat', sans-serif; /* Changed to Montserrat */
+   font-family: 'Inter', sans-serif; /* Changed to Inter */
  }
  
  .slicknav_btn {
@@ -35,9 +35,9 @@
    display: block;
    line-height: 1.188em;
    float: left;
-   color: #ffe5b9; /* Whisper Yellow */
+   color: #F9E7C8; /* Champagne */
    font-weight: 700;
-   font-family: 'Montserrat', sans-serif; /* Changed to Montserrat */
+   font-family: 'Inter', sans-serif; /* Changed to Inter */
    text-shadow: 0 1px 3px #000;
  }
  
@@ -62,7 +62,7 @@
    width: 1.125em;
    height: 0.125em;
    border-radius: 1px;
-   background-color: #ffe5b9; /* Whisper Yellow */
+   background-color: #F9E7C8; /* Champagne */
    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.25);
  }
  
@@ -100,11 +100,11 @@
    text-decoration: none;
    border-radius: 6px;
    transition: background-color 0.3s ease, color 0.3s ease;
-   font-family: 'Montserrat', sans-serif; /* Changed to Montserrat */
+   font-family: 'Inter', sans-serif; /* Changed to Inter */
  }
  
  .slicknav_nav .slicknav_row:hover {
-   background-color: #ffe5b9; /* Whisper Yellow hover */
+   background-color: #F9E7C8; /* Champagne Yellow hover */
    color: black; /* Black font color when hovered */
  }
  
@@ -113,7 +113,7 @@
  }
  
  .slicknav_nav a:hover {
-   background-color: #ffe5b9; /* Hover background in Whisper Yellow */
+   background-color: #F9E7C8; /* Hover background in Champagne Yellow */
    color: black; /* Font turns black on hover */
    border-radius: 6px;
  }
@@ -130,7 +130,7 @@
  
  .slicknav_brand {
    float: left;
-   color: #ffe5b9; /* Whisper Yellow */
+   color: #F9E7C8; /* Champagne */
    font-size: 18px;
    line-height: 30px;
    padding: 7px 12px;
@@ -138,6 +138,6 @@
    background-color: black; /* Black background for brand */
    border-radius: 4px;
    text-transform: uppercase;
-   font-family: 'Montserrat', sans-serif; /* Changed to Montserrat */
+   font-family: 'Inter', sans-serif; /* Changed to Inter */
  }
  

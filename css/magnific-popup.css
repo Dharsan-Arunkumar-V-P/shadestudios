@@ -54,7 +54,7 @@
   background: #1c1c1c; /* Dark background for content */
   border-radius: 10px;
   padding: 20px;
-  box-shadow: 0px 0px 15px rgba(106, 27, 154, 0.8); /* Purple shadow for a cosmic vibe */
+  box-shadow: 0px 0px 15px rgba(58, 26, 95, 0.8); /* Deep Purple shadow for a cosmic vibe */
 }
 
 .mfp-inline-holder .mfp-content,
@@ -102,7 +102,7 @@
 }
 
 .mfp-preloader {
-  color: #6a1b9a; /* Cosmic purple preloader */
+  color: #3A1A5F /* Changed to Deep Deep Purple*/; /* Cosmic Deep Purple preloader */
   position: absolute;
   top: 50%;
   width: auto;
@@ -114,7 +114,7 @@
 }
 
 .mfp-preloader a {
-  color: #6a1b9a;
+  color: #3A1A5F /* Changed to Deep Deep Purple*/;
 }
 
 .mfp-preloader a:hover {
@@ -163,7 +163,7 @@ button::-moz-focus-inner {
   color: #FFF;
   font-style: normal;
   font-size: 28px;
-  font-family: Arial, Baskerville, monospace;
+  font-family: 'Inter', sans-serif; /* Changed to Inter */
 }
 
 .mfp-close:hover,
@@ -450,7 +450,7 @@ screen and (max-height: 300px) {
 
 /* Focus styles for accessibility */
 .mfp-close:focus, .mfp-arrow:focus {
-  outline: 3px solid #6a1b9a;
+  outline: 3px solid #3A1A5F;
 }
 
 .mfp-close {
@@ -460,7 +460,7 @@ screen and (max-height: 300px) {
 /* Button hover effects */
 .mfp-close:hover, .mfp-arrow:hover {
   opacity: 1;
-  background-color: rgba(106, 27, 154, 0.8); /* Slight purple highlight */
+  background-color: rgba(58, 26, 95, 0.8); /* Slight Deep Purple highlight */
 }
 
 /* Mobile optimization */
@@ -495,7 +495,7 @@ screen and (max-height: 300px) {
   max-height: 80vh;
   overflow-y: auto;
   scrollbar-width: thin;
-  scrollbar-color: #6a1b9a rgba(0, 0, 0, 0.5);
+  scrollbar-color: #3A1A5F /* Changed to Deep Deep Purple*/ rgba(0, 0, 0, 0.5);
 }
 
 .mfp-content::-webkit-scrollbar {
@@ -503,7 +503,7 @@ screen and (max-height: 300px) {
 }
 
 .mfp-content::-webkit-scrollbar-thumb {
-  background-color: #6a1b9a;
+  background-color: #3A1A5F /* Changed to Deep Deep Purple*/;
 }
 
 .mfp-content::-webkit-scrollbar-track {
