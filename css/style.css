@@ -226,31 +226,31 @@ ul, ol {
 -----------------------*/
 
 #preloder {
-  background: linear-gradient(to bottom, #000000, #000000);
+  background: #000000;
   position: fixed;
   width: 100%;
   height: 100%;
   top: 0;
   left: 0;
   z-index: 999999;
-  background: #000;
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
 }
 
 .loader {
   width: 200px;
   height: 200px;
-  background: radial-gradient(circle, rgba(249, 231, 200, 0.3) 0%, rgba(0, 0, 0, 1) 70%);
-  animation: fadeInOut 2s infinite;
-  border-radius: 50%;
+  background-image: url('img/ink-animation.svg'); /* Add ink spread animation */
+  background-size: cover;
+  animation: inkSpread 2s ease-in-out forwards;
 }
 
-@keyframes fadeInOut {
-  0% { opacity: 0; transform: scale(1.1); }
-  50% { opacity: 1; transform: scale(1); }
-  100% { opacity: 0; transform: scale(1.1); }
+@keyframes inkSpread {
+  0% { opacity: 0; transform: scale(0.8); filter: blur(10px); }
+  50% { opacity: 1; transform: scale(1.1); filter: blur(3px); }
+  100% { opacity: 1; transform: scale(1); filter: blur(0px); }
 }
 
 /*---------------------
