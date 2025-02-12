@@ -102,7 +102,7 @@
 }
 
 .mfp-preloader {
-  color: #3A1A5F /* Changed to Deep Deep Purple*/; /* Cosmic Deep Purple preloader */
+  color: #000000 /* Changed to Deep Deep Purple*/; /* Cosmic Deep Purple preloader */
   position: absolute;
   top: 50%;
   width: auto;
@@ -114,7 +114,7 @@
 }
 
 .mfp-preloader a {
-  color: #3A1A5F /* Changed to Deep Deep Purple*/;
+  color: #000000 /* Changed to Deep Deep Purple*/;
 }
 
 .mfp-preloader a:hover {
@@ -450,7 +450,7 @@ screen and (max-height: 300px) {
 
 /* Focus styles for accessibility */
 .mfp-close:focus, .mfp-arrow:focus {
-  outline: 3px solid #3A1A5F;
+  outline: 3px solid #000000;
 }
 
 .mfp-close {
@@ -495,7 +495,7 @@ screen and (max-height: 300px) {
   max-height: 80vh;
   overflow-y: auto;
   scrollbar-width: thin;
-  scrollbar-color: #3A1A5F /* Changed to Deep Deep Purple*/ rgba(0, 0, 0, 0.5);
+  scrollbar-color: #000000 /* Changed to Deep Deep Purple*/ rgba(0, 0, 0, 0.5);
 }
 
 .mfp-content::-webkit-scrollbar {
@@ -503,7 +503,7 @@ screen and (max-height: 300px) {
 }
 
 .mfp-content::-webkit-scrollbar-thumb {
-  background-color: #3A1A5F /* Changed to Deep Deep Purple*/;
+  background-color: #000000 /* Changed to Deep Deep Purple*/;
 }
 
 .mfp-content::-webkit-scrollbar-track {
