@@ -7,6 +7,10 @@ html, body {
   font-family: 'Inter', sans-serif; /* Changed from inter to Inter */
   -webkit-font-smoothing: antialiased;
   background-color: #000000;
+  background-image: url('../img/main-bg.png'); /* Ensure correct path */
+  background-size: contain; /* Prevents cropping */
+  background-position: center center;
+  background-repeat: no-repeat;
   color: #F0F2F9; /* Changed text color to Ghost White */
 }
 
@@ -284,8 +288,13 @@ ul, ol {
 }
 
 .header__nav__menu {
-  display: inline-block;
-  margin-right: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(10px); /* Glassmorphism Effect */
+  background: rgba(0, 0, 0, 0.6); /* Semi-transparent black */
+  padding: 15px 25px;
+  border-radius: 10px;
 }
 
 .header__nav__menu ul {
@@ -300,68 +309,98 @@ ul, ol {
   margin: 0 20px;
 }
 
-.header__nav__menu ul li:hover .dropdown {
-  top: 34px;
-  opacity: 1;
-  visibility: visible;
+/* NAVIGATION MENU */
+.header__nav__menu ul {
+  display: flex;
+  gap: 20px;
+  list-style: none;
 }
 
-.header__nav__menu ul li .dropdown {
-  position: absolute;
-  left: 0;
-  top: 50px;
-  width: 160px;
-  background: #222;
-  text-align: left;
-  padding: 5px 0;
-  z-index: 9;
-  opacity: 0;
-  visibility: hidden;
-  transition: all 0.3s;
-}
-
-.header__nav__menu ul li .dropdown li a {
-  font-size: 14px;
-  color: #F9E7C8; /* Champagne Yellow for text */
-  padding: 10px 20px;
-  display: block;
-  transition: color 0.3s;
-}
-
-.header__nav__menu ul li .dropdown li a:hover {
-  color: #F0F2F9; /* Ghost White on hover */
+.header__nav__menu ul li {
+  position: relative;
 }
 
 .header__nav__menu ul li a {
   font-size: 16px;
   font-family: 'Exo 2', sans-serif;
-  color: #F9E7C8; /* Champagne Yellow for links */
-  display: block;
+  color: #F9E7C8; /* Champagne Yellow */
   text-transform: uppercase;
+  padding: 10px 15px;
+  display: block;
+  transition: all 0.3s ease-in-out;
   position: relative;
-  padding: 8px 0;
-  transition: color 0.3s;
 }
 
 .header__nav__menu ul li a:hover {
-  color: #F0F2F9; /* Ghost White on hover */
+  color: #F0F2F9; /* Ghost White */
 }
 
+/* Fancy Underline Effect */
 .header__nav__menu ul li a:after {
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  height: 2px;
-  background: #F9E7C8; /* Champagne Yellow underline */
   content: "";
-  transform: scale(0);
-  transition: transform 0.3s;
+  position: absolute;
+  left: 50%;
+  bottom: -5px;
+  width: 0%;
+  height: 2px;
+  background: linear-gradient(90deg, #F9E7C8, #FFD700);
+  transition: width 0.3s ease-in-out, left 0.3s ease-in-out;
 }
 
 .header__nav__menu ul li a:hover:after {
-  transform: scale(1);
+  width: 100%;
+  left: 0;
 }
+
+/* DROPDOWN MENU */
+.header__nav__menu ul li .dropdown {
+  position: absolute;
+  left: 50%;
+  top: 50px;
+  width: 180px;
+  background: rgba(34, 34, 34, 0.8); /* Glassmorphic dark */
+  backdrop-filter: blur(10px); /* Frosted glass effect */
+  border-radius: 8px;
+  text-align: left;
+  padding: 8px 0;
+  z-index: 10;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease-in-out;
+  transform: translateX(-50%) translateY(10px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.header__nav__menu ul li:hover .dropdown {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(0);
+}
+
+/* Dropdown Items */
+.header__nav__menu ul li .dropdown li {
+  list-style: none;
+}
+
+.header__nav__menu ul li .dropdown li a {
+  font-size: 14px;
+  color: #F9E7C8;
+  padding: 12px 20px;
+  display: block;
+  transition: all 0.3s;
+}
+
+.header__nav__menu ul li .dropdown li a:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: #FFD700; /* Golden highlight */
+  border-radius: 5px;
+}
+
+/* Subtle Hover Glow */
+.header__nav__menu ul li a:hover {
+  text-shadow: 0 0 5px rgba(249, 231, 200, 0.6);
+}
+
 
 /* Social icons */
 .header__nav__social {
@@ -451,6 +490,12 @@ ul, ol {
 /*---------------------
   Hero
 -----------------------*/
+
+.hero-section {
+  box-shadow: 0px 10px 30px rgba(249, 231, 200, 0.3); /* Soft champagne glow */
+  padding: 50px 0;
+}
+
 .hero__slider.owl-carousel .owl-item.active .hero__text span {
   top: 0;
   opacity: 1;
@@ -500,15 +545,22 @@ ul, ol {
   margin-right: 0;
 }
 
-.hero__item {
-  height: 684px;
-  padding-top: 255px;
-  background-size: cover;
-  background-position: center;
+..hero__item {
+  display: flex; /* Enables content centering */
+  justify-content: center; /* Centers horizontally */
+  align-items: center; /* Centers vertically */
+  height: 684px; /* Keeps original height */
+  padding-top: 255px; /* Maintains existing padding */
+  background-size: cover; /* Ensures full background */
+  background-position: center; /* Centers the background */
+  background-repeat: no-repeat; /* Prevents background repeat */
+  position: relative; /* Ensures proper positioning */
+  overflow: hidden; /* Prevents any extra content from spilling out */
 }
 
+
 .hero__text span {
-  color: black;
+  color: #F9E7C8;
   display: block;
   font-size: 15px;
   letter-spacing: 2px;
@@ -522,7 +574,7 @@ ul, ol {
   transition: all, 0.3s;
 }
 .hero__text h2 {
-  color: black;
+  color: #F9E7C8;
   font-size: 60px;
   font-weight: 700;
   line-height: 70px;
@@ -1817,19 +1869,42 @@ ul, ol {
 }
 /* Medium Device = 1200px */
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
-  .header__nav__menu {
-    margin-right: 25px;
-  }
-
-  .header__nav__menu ul {
+  .header-nav {
     display: flex;
     justify-content: center;
-    gap: 20px;
+    align-items: center;
+    background: #000; /* Adjust based on your theme */
+    padding: 15px 20px;
 }
 
-  .header__nav__menu ul li {
-    margin-right: 25px;
+  .header__nav__menu {
+    display: flex;
+    justify-content: center; /* Centers the menu */
+    align-items: center;
+    margin-right: 0;
   }
+  
+  .header__nav__menu ul {
+    display: flex;
+    gap: 20px; /* Adds spacing between menu items */
+    justify-content: center;
+  }
+  
+  .header__nav__menu ul li .dropdown {
+    top: 40px;
+    background: #222; /* Slightly lighter black */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.2s ease-in-out, visibility 0.2s ease-in-out;
+  }
+  
+  .header__nav__menu ul li:hover .dropdown {
+    top: 36px;
+    opacity: 1;
+    visibility: visible;
+  }
+
 
   .header__nav__social {
     padding-left: 25px;
@@ -1855,6 +1930,169 @@ ul, ol {
     max-width: 930px !important;
   }
 }
+
+
+/* Menu List */
+.nav-list {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-list li {
+  position: relative;
+}
+
+/* Menu Links */
+.nav-list a {
+  text-decoration: none;
+  color: #f5deb3; /* Warm golden tone */
+  font-size: 16px;
+  padding: 10px 15px;
+  transition: all 0.3s ease-in-out;
+  position: relative;
+}
+
+/* Hover Effect */
+.nav-list a:hover,
+.nav-list .active a {
+  color: #fff;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 5px;
+}
+
+/*-------------------
+  DROPDOWN MENU
+-------------------*/
+/* Dropdown Parent */
+.dropdown-parent {
+  position: relative;
+}
+
+/* Dropdown Arrow */
+.dropdown-arrow {
+  font-size: 14px;
+  margin-left: 5px;
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Rotate Arrow on Hover */
+.dropdown-parent:hover .dropdown-arrow {
+  transform: rotate(180deg);
+}
+
+/* Dropdown Styling */
+.dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: rgba(20, 20, 20, 0.95); /* Smooth Dark Transparent */
+  min-width: 180px;
+  padding: 8px 0;
+  border-radius: 8px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+/* Show Dropdown on Hover */
+.dropdown-parent:hover .dropdown {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+/* Dropdown Items */
+.dropdown li {
+  list-style: none;
+}
+
+.dropdown a {
+  color: #F9E7C8; /* Champagne Yellow */
+  display: block;
+  padding: 12px 16px;
+  font-size: 14px;
+  text-decoration: none;
+  transition: background 0.3s ease, color 0.3s ease;
+  border-radius: 6px;
+}
+
+/* Hover Effect */
+.dropdown a:hover {
+  background: rgba(249, 231, 200, 0.15);
+  color: #fff;
+}
+
+/*-------------------
+  SOCIAL ICONS
+-------------------*/
+.header__nav__social {
+  margin-top: 15px;
+  text-align: center;
+}
+
+.header__nav__social a {
+  font-size: 18px;
+  color: #f5deb3;
+  margin: 0 8px;
+  transition: color 0.3s;
+}
+
+/* Social Icon Hover */
+.header__nav__social a:hover {
+  color: #fff;
+}
+
+/*-------------------
+  RESPONSIVENESS
+-------------------*/
+@media (max-width: 768px) {
+  .header__nav__menu {
+      flex-direction: column;
+      padding: 15px;
+  }
+
+  .nav-list {
+      flex-direction: column;
+      gap: 10px;
+  }
+
+  .dropdown {
+      position: static;
+      display: none;
+  }
+
+  .dropdown-parent:hover .dropdown {
+      display: block;
+  }
+}
+
+/* Mobile Menu Styles */
+@media (max-width: 768px) {
+  .header-nav {
+      flex-direction: column;
+  }
+
+  .nav-list {
+      flex-direction: column;
+      gap: 10px;
+  }
+
+  .dropdown {
+      position: static;
+      display: none;
+  }
+
+  .dropdown-parent:hover .dropdown {
+      display: block;
+  }
+}
+
+
 /* Tablet Device = 768px */
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   .hero__slider.owl-carousel .owl-dots {
